@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="One Weather - A minimal Weather Site">
+    <meta property="og:description" content="A weather app that tells you nothing more but a lot less.">
+    <meta property="og:type" content="website">
+
+    <title>One Weather</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="card">
+        <form class="search" id="myform">
+            <input type="text" placeholder="Enter city name" spellcheck="false">
+            <button type="submit"><img src="images/search.png" alt="search icon"></button>
+        </form>
+        <div class="weather">
+            <image src="images/rain.png" class="weather-icon"></image>
+            <h1 class="temp"></h1>
+            <h2 class="city"></h2>
+            <div class="details">
+                <div class="col">
+                    <img src="images/humidity.png" alt="humidity">
+                    <div>
+                        <p class="humidity"></p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <img src="images/wind.png" alt="humidity">
+                    <div>
+                        <p class="wind"></p>
+                        <p>Wind</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+
+    
+</body>
+</html>
