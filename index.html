@@ -7,6 +7,19 @@
     <meta property="og:description" content="A weather app that tells you nothing more but a lot less.">
     <meta property="og:type" content="website">
 
+    <meta property="og:url" content="https://one-weather.netlify.app/">
+    <meta property="og:site_name" content="One Weather">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="One Weather">
+    <meta name="twitter:url" content="https://one-weather.netlify.app/">
+    <meta name="twitter:domain" content="one-weather.netlify.app/">
+    <meta name ="twitter:site" content="@soren_blank">
+    <meta name="twitter:description" content="A weather app that tells you nothing more but a lot less.">
+    <meta name="twitter:image" content="https://one-weather.netlify.app/images/embed.png">
+    <meta name="theme-color" content="#202b3b">
+
+
+
     <title>One Weather</title>
 
     <link rel="stylesheet" href="styles.css">
@@ -15,19 +28,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+
 </head>
 <body>
 
     <div class="card">
-        <form class="search" id="myform">
-            <input type="text" placeholder="Enter city name" spellcheck="false">
-            <button type="submit"><img src="images/search.png" alt="search icon"></button>
-        </form>
-        <div class="weather">
-            <image src="images/rain.png" class="weather-icon"></image>
-            <h1 class="temp"></h1>
-            <h2 class="city"></h2>
-            <div class="details">
+        <div class="left">
+            <form class="search" id="myform">
+                <input type="text" placeholder="Enter city name" spellcheck="false">
+                <button type="submit"><img src="images/search.png" alt="search icon"></button>
+            </form>
+            <div class="weather">
+                <image src="images/rain.png" class="weather-icon"></image>
+                <h1 class="temp"></h1>
+                <h2 class="city"></h2>
+
+                <div class="details">
+
+                    
+                    <div class="col">
+                        <img src="images/temp.png" alt="temperature">
+                        <div>
+                            <p class="feels"></p>
+                            <p>Feels like</p>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <img src="images/wind.png" alt="wind">
+                        <div>
+                            <p class="wind"></p>
+                            <p>Wind</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="break"></div>
+
+        <div class="right">
+
+            <div class="container">
+
                 <div class="col">
                     <img src="images/humidity.png" alt="humidity">
                     <div>
@@ -35,15 +83,59 @@
                         <p>Humidity</p>
                     </div>
                 </div>
-
-                <div class="col">
-                    <img src="images/wind.png" alt="humidity">
+    
+                <div class="col pressurecol">
+                    <img src="images/pressure.png" alt="pressure">
                     <div>
-                        <p class="wind"></p>
-                        <p>Wind</p>
+                        <p class="pressure"></p>
+                        <p>Pressure</p>
                     </div>
                 </div>
+
             </div>
+
+            <div class="container">
+
+                <div class="col">
+                    <img src="images/sunset.png" alt="sunset">
+                    <div>
+                        <p class="sunset"></p>
+                        <p>Sunset</p>
+                    </div>
+                </div>
+    
+                <div class="col sunrisepad">
+                    <img src="images/sunrise.png" alt="sunrise">
+                    <div>
+                        <p class="sunrise"></p>
+                        <p>Sunrise</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="container">
+
+                <div class="col">
+                    <img src="images/max.png" alt="sunrise">
+                    <div>
+                        <p class="maxtemp"></p>
+                        <p>Max Temp</p>
+                    </div>
+                </div>
+    
+                <div class="col">
+                    <img src="images/min.png" alt="sunrise">
+                    <div>
+                        <p class="mintemp"></p>
+                        <p>Min Temp</p>
+                    </div>
+                </div>
+
+            </div>
+
+            
         </div>
     </div>
 

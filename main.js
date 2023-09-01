@@ -24,17 +24,41 @@ async function funcApi(city){
     return data;
 }
 
+function timeConverter(UNIX_timestamp){
+    var a = new Date(UNIX_timestamp * 1000);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var year = a.getFullYear();
+    var month = months[a.getMonth()];
+    var date = a.getDate();
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var sec = a.getSeconds();
+    // var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    var time =  hour + ':' + min ;
+    return time;
+  }
+
 
 
 
 async function weather(location,api){
     let data = await api(location);
+
+    console.log(data);
     
 
-    document.querySelector(".city").innerHTML = data.name;
+    document.querySelector(".city").innerHTML = `${data.name}`;
     document.querySelector(".temp").innerHTML = `${Math.round(data.main.temp)}°C`;
     document.querySelector(".humidity").innerHTML = `${data.main.humidity}%`;
     document.querySelector(".wind").innerHTML = `${data.wind.speed} km/h`;
+    document.querySelector(".feels").innerHTML = `${data.main.feels_like}°C`;
+    document.querySelector(".pressure").innerHTML = `${(data.main.pressure/1015.22).toFixed(2)}atm`;
+
+    document.querySelector(".sunrise").innerHTML = `${timeConverter(data.sys.sunrise)}`;
+    document.querySelector(".sunset").innerHTML = `${timeConverter(data.sys.sunset)}`;
+
+    document.querySelector(".maxtemp").innerHTML = `${Math.round(data.main.temp_max)}°C`;
+    document.querySelector(".mintemp").innerHTML = `${Math.round(data.main.temp_min)}°C`;
 
     let weatherData = data.weather[0].main
 
@@ -57,6 +81,8 @@ async function weather(location,api){
         weatherIcon.src = "images/mist.png"; 
     }
 
+    console.log(timeConverter(data.sys.sunrise));
+    console.log(timeConverter(data.sys.timezone));
 }
 
 button.addEventListener("click", ()=> {

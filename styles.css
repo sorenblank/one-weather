@@ -15,15 +15,16 @@ body {
 }
 
 .card{
-    width: 90%;
-    max-width: 470px;
+    width: 100%;
+    max-width: 920px;
     background-color: #202b3b;
     color: #f0f1f1;
-    margin:50px auto;
     border-radius: 15px;
     padding: 40px 35px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.9);
+    display: flex;
+    flex-direction: row;
 }
 
 .search{
@@ -80,6 +81,7 @@ body {
     align-items: center;
     padding: 0 20px;
     margin-top: 50px;
+    gap:40px;
 }
 
 .col img{
@@ -94,7 +96,119 @@ body {
     align-items: center;
 }
 
-.humidity, .wind{
+.humidity, .wind, .feels, .pressure, .sunrise, .sunset, .mintemp, .maxtemp{
     font-size: 28px;
     margin-top:-6px;
 }
+
+.break{
+    padding: 0px;
+    margin:auto 20px;
+    border: #cfd4dd98 solid 1.5px;
+    height: 510px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    gap:30px;
+}
+
+
+.left{
+    min-width: 450px;
+}
+
+
+
+@media only screen and (max-width: 815px) {
+
+    .details{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        margin: 5px auto;
+        max-width: 90%;
+
+        padding: 40px 0px;
+    }
+
+    form{
+        margin: 0 auto;
+    }
+
+    .weather h1{
+        font-size: 32px;
+    }
+
+    .weather-icon{
+        width: 100px;
+    }
+
+    .break{
+        height: 1px;
+        width: 90%;
+        margin: 20px auto;
+
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    
+
+    .search{
+        max-width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .search input{
+        height: 40px;
+        width: 40px;
+    }
+
+    .search button{
+        height: 40px;
+        width: 40px;
+    }
+
+    .search button img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .humidity, .wind, .feels, .pressure, .sunrise, .sunset, .mintemp, .maxtemp{
+        font-size: 16px;
+        margin-top:-6px;
+    }
+
+    .left{
+        min-width: 0;
+    }
+
+    .sunrisepad{
+        padding-right: 10px;
+    }
+  }
