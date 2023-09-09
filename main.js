@@ -80,9 +80,10 @@ async function weather(location,api){
     else if (weatherData == "Mist") {
         weatherIcon.src = "images/mist.png"; 
     }
+    else if (weatherData == "Haze") {
+        weatherIcon.src = "images/haze.png"
+    }
 
-    console.log(timeConverter(data.sys.sunrise));
-    console.log(timeConverter(data.sys.timezone));
 }
 
 button.addEventListener("click", ()=> {
