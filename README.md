@@ -1,4 +1,4 @@
-# My Minimal First Portfolio
+# A minimal Weather App
 A minimalist weather app that provides essential weather information at a glance. Get real-time updates on temperature, weather conditions, humidity, and wind speed without distractions. Stay informed with simplicity. A test project.
  
 ### To make the contact form work
